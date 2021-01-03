@@ -1,0 +1,12 @@
+---
+  - name: "hello"
+    signals:
+      - order: "hello"
+      - order: "hi"
+      - order: "howdy"
+      - order: "hey"
+    neurons:
+      - systemdate:
+        - shell:
+            cmd: "awk -v min=0 -v max=5 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'"
+            file_template: templates/hello.j2

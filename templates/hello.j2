@@ -1,0 +1,27 @@
+{% if output == 0 %}
+Hello sir!
+{% elif output == 1 %}
+Hello, mister!
+{% elif output == 2 %}
+Hello sir, what can I do for you?
+{% elif output == 3 %}
+Hello mister Pasciak.
+{% elif output == 4 %}
+I am at your service sir.
+{% elif output == 5 %}
+    {% if hours|int() in range(0,3) %}
+    Hello sir. Are you up late or up early? I can't tell.
+    {% elif hours|int() in range(4,7) %}
+    Good morning sir. I see you are up early, I congratulate you and hope you get coffee soon.
+    {% elif hours|int() in range(8,12) %}
+    Good morning sir.
+    {% elif hours|int() in range(13,16) %}
+    Good afternoon sir.
+    {% elif hours|int() in range(17,22) %}
+    Good evening sir.
+    {% elif hours|int() in range(23,24) %}
+    Good evening sir, may I ask: Have you thought about going to bed?
+    {% else %}
+    Hello sir.
+    {% endif %}
+{% endif %}

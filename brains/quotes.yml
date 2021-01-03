@@ -1,0 +1,11 @@
+---
+  - name: "death"
+    signals:
+      - order: "what do we say to the god of death?"
+    neurons:
+      - say: "not today!"
+  - name: "prototype"
+    signals:
+      - order: "Jarvis, where's my flight power?"
+    neurons:
+      - say: "Working on it, sir. This is a prototype."
